@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="chbFavorite" type="id">chbox</item>
+    <item name="clBars" type="id">clBars</item>
+    <item name="ivPhoto" type="id">ivPhoto</item>
+    <item name="tvName" type="id">tvName</item>
+    <item name="tvCity" type="id">tvcity</item>
+    <item name="tvID" type="id">tvid</item>
+    <item name="tvCost" type="id">tvcost</item>
+    <item name="tvDescription" type="id">tvdesc</item>
+    <item name="tvAvailable" type="id">tvavailable</item>
+</resources>

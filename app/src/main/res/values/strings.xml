@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">GravityMVP</string>
+    <string name="please_wait">Please wait…</string>
+    <string name="anycity">Оренбург</string>
+    <string name="bla">qwewqeasdasd</string>
+    <string name="cost">185</string>
+    <string name="_35">Товар №35</string>
+    <string name="_9">9</string>
+    <string name="favorite">Любимый товар</string>
+    <string name="_5">5</string>
+    <string name="error">error</string>
+    <string name="google_maps_key"
+        templateMergeStrategy="preserve"
+        translatable="false">AIzaSyAN7k0weSpI9e5C_HpmK5vcyty5v2i8AVI</string>
+    <string name="anypict">anypict</string>
+
+</resources>
