@@ -29,6 +29,7 @@ public class GravityPresenter {
         Call <List <Mock>> call = api.getMocks();
         /*in background process are loading our mocks*/
         call.enqueue(new Callback<List <Mock>>() {
+
             @Override
             public void onResponse(@NonNull Call<List <Mock>> call, @NonNull Response<List <Mock>> response) {
                 view.showMocks(response.body());
@@ -39,6 +40,7 @@ public class GravityPresenter {
             public void onFailure(@NonNull Call <List <Mock>> call, @NonNull Throwable t) {
                 view.showError("Error");
                 view.hideProgress();
+
             }
         });
     }

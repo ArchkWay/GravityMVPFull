@@ -20,28 +20,18 @@ import java.util.List;
 public class GravityActivity extends AppCompatActivity implements GravityPresenter.View, GravityAdapter.Callback{
 
     private GravityAdapter gravityAdapter;
-
-
     private ProgressDialog progressDialog;
-
-    private ConstraintLayout clMain;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gravity);
 
-
         /*view launch*/
         init();
     }
 
     private void init() {
-        clMain = findViewById(R.id.clMain);
-        /*instal colored back, if you rich enough*/
-        if(Build.VERSION.SDK_INT >= 24) {
-            clMain.setBackground(getResources().getDrawable(R.drawable.back, getTheme()));
-        }
         /*recycler view stuff*/
         LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         layoutManager.setOrientation(LinearLayoutManager.VERTICAL);
@@ -51,9 +41,10 @@ public class GravityActivity extends AppCompatActivity implements GravityPresent
         RecyclerView rvList = findViewById(R.id.rvList);
         rvList.setLayoutManager(layoutManager);
         rvList.setAdapter(gravityAdapter);
-        /*lounch presenter*/
+        /*launch presenter*/
         GravityPresenter presenter = new GravityPresenter(this);
         presenter.loadMocks();
+
     }
 
     @Override
@@ -69,6 +60,7 @@ public class GravityActivity extends AppCompatActivity implements GravityPresent
     public void showError(String error) {
         Toast.makeText(this, R.string.error,Toast.LENGTH_SHORT ).show();
     }
+
     @Override
     public void hideProgress() {
         if (progressDialog != null) {

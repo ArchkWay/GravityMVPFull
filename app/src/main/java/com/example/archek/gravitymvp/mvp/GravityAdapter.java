@@ -61,9 +61,9 @@ public class GravityAdapter extends RecyclerView.Adapter<GravityAdapter.ViewHold
         return mocks.size();
     } //count all items
 
-    public void replaceAll(List<Mock> reviewsToReplace) {//load all reviews in main list
+    public void replaceAll(List<Mock> mocksToReplace) {//load all mocks in main list
         mocks.clear();
-        mocks.addAll(reviewsToReplace);
+        mocks.addAll(mocksToReplace);
         notifyDataSetChanged();
     }
 
