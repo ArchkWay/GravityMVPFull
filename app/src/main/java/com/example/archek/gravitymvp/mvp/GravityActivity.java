@@ -58,7 +58,7 @@ public class GravityActivity extends AppCompatActivity implements GravityPresent
 
     @Override
     public void showError(String error) {
-        Toast.makeText(this, R.string.error,Toast.LENGTH_SHORT ).show();
+        Toast.makeText(this, R.string.error,Toast.LENGTH_SHORT).show();
     }
 
     @Override

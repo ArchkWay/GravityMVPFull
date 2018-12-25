@@ -30,8 +30,8 @@ public class GravityAdapter extends RecyclerView.Adapter<GravityAdapter.ViewHold
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater inflater = LayoutInflater.from(parent.getContext());
-        View itemView = inflater.inflate( R.layout.item, parent, false);
-        final ViewHolder holder = new ViewHolder( itemView ); //set on click listener(launch map)
+        View itemView = inflater.inflate(R.layout.item, parent, false);
+        final ViewHolder holder = new ViewHolder(itemView); //set on click listener(launch map)
         holder.tvDescription.setMovementMethod(new ScrollingMovementMethod());
         itemView.setOnClickListener( new View.OnClickListener() {
             @Override

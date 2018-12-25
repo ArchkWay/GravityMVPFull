@@ -20,7 +20,7 @@ public class GravityPresenter {
     private final Api api = RestApi.createService(Api.class);
 
 
-    public GravityPresenter( View view) {
+    public GravityPresenter(View view) {
         this.view = view;
     }
 

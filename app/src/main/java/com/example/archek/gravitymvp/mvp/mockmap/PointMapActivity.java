@@ -18,7 +18,7 @@ import com.google.android.gms.maps.model.MarkerOptions;
 import static java.lang.Double.valueOf;
 
 public class PointMapActivity extends AppCompatActivity implements OnMapReadyCallback {
-    /*ger coordinated and launch map with corespond marker*/
+    /*get coordinated and launch map with correspond marker*/
     private static final String EXTRA_LATITUDE = "latitude";
     private static final String EXTRA_LONGITUDE = "longitude";
     private static final String EXTRA_NAME = "name";
@@ -41,13 +41,13 @@ public class PointMapActivity extends AppCompatActivity implements OnMapReadyCal
 
     @Override
     public void onMapReady(GoogleMap googleMap) {
-        googleMap.setMapType( GoogleMap.MAP_TYPE_NORMAL );
+        googleMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
         Intent intent = getIntent();
         String latitude = intent.getStringExtra(EXTRA_LATITUDE);
         String longitude = intent.getStringExtra(EXTRA_LONGITUDE);
         String name = intent.getStringExtra(EXTRA_NAME);
         LatLng point = new LatLng(valueOf(latitude), valueOf(longitude));
         googleMap.addMarker(new MarkerOptions().position(point).title(name));
-        googleMap.moveCamera( CameraUpdateFactory.newLatLng( point ) );
+        googleMap.moveCamera(CameraUpdateFactory.newLatLng(point));
     }
 }
