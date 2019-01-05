@@ -9,7 +9,6 @@ import com.example.archek.gravitymvp.truemvp.di.BaseApp;
 import javax.inject.Inject;
 
 public class MainPresenter implements MainContract.presenter{
-
     MainContract.view view;
     @Inject MainContract.model model;
 
@@ -18,10 +17,11 @@ public class MainPresenter implements MainContract.presenter{
         BaseApp.get(context).getInjector().inject(this);
     }
 
+    /*getting mocks from Model*/
     @Override
     public void attachView(MainContract.view view) {
         this.view = view;
-        this.model.getMocks().subscribe(view::setMocks);
+        model.getMocks().subscribe(view::setMocks);
     }
 
     @Override

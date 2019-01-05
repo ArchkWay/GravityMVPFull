@@ -33,13 +33,10 @@ public class GravityAdapter extends RecyclerView.Adapter<GravityAdapter.ViewHold
         View itemView = inflater.inflate(R.layout.item, parent, false);
         final ViewHolder holder = new ViewHolder(itemView); //set on click listener(launch map)
         holder.tvDescription.setMovementMethod(new ScrollingMovementMethod());
-        itemView.setOnClickListener( new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Mock mock  = mocks.get(holder.getAdapterPosition());
-                callback.onMockClick(mock);
-            }
-        } );
+        itemView.setOnClickListener(v -> {
+            Mock mock  = mocks.get(holder.getAdapterPosition());
+            callback.onMockClick(mock);
+        });
         return holder;
     }
 
@@ -70,7 +67,7 @@ public class GravityAdapter extends RecyclerView.Adapter<GravityAdapter.ViewHold
 
     static class ViewHolder extends RecyclerView.ViewHolder {
 
-        private final ImageView ivPhoto; //instal all views in holder
+        private final ImageView ivPhoto; //initial all views in holder
         private final TextView tvId;
         private final TextView tvName;
         private final TextView tvCity;

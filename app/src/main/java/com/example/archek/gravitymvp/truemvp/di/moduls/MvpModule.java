@@ -12,11 +12,11 @@ import javax.inject.Singleton;
 
 import dagger.Module;
 import dagger.Provides;
-import retrofit2.Retrofit;
 
 @Module
 public class MvpModule {
-    Context context;
+    /*modules injectors*/
+    private final Context context;
     public MvpModule(Context context){
         this.context = context;
     }

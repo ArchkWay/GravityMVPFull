@@ -9,6 +9,7 @@ import com.example.archek.gravitymvp.truemvp.di.moduls.MvpModule;
 
 
 public class BaseApp extends Application {
+    /*baseDI*/
     private AppComponent appComponent;
 
     public AppComponent getInjector() {

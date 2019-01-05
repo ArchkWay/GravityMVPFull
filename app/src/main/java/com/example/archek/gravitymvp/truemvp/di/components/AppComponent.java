@@ -9,7 +9,7 @@ import com.example.archek.gravitymvp.truemvp.views.MainActivity;
 import javax.inject.Singleton;
 
 import dagger.Component;
-
+/*places for injecting*/
 @Singleton
 @Component(modules = {MvpModule.class})
 public interface AppComponent {

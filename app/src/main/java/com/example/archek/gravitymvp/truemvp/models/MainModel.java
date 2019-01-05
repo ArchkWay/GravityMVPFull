@@ -17,8 +17,8 @@ import io.reactivex.android.schedulers.AndroidSchedulers;
 import io.reactivex.schedulers.Schedulers;
 
 public class MainModel implements MainContract.model{
-
-    Api api;
+    /*get through retrofit mocks for further using -> provider -> view*/
+    private final Api api;
     @Inject RetrofitProvider provider;
 
     public MainModel(Context context){
