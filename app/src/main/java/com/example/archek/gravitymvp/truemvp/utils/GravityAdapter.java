@@ -1,4 +1,4 @@
-package com.example.archek.gravitymvp.mvp;
+package com.example.archek.gravitymvp.truemvp.utils;
 
 import android.annotation.SuppressLint;
 import android.support.annotation.NonNull;
@@ -11,7 +11,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.archek.gravitymvp.R;
-import com.example.archek.gravitymvp.net.Mock;
+import com.example.archek.gravitymvp.truemvp.utils.net.Mock;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -46,6 +46,7 @@ public class GravityAdapter extends RecyclerView.Adapter<GravityAdapter.ViewHold
     @SuppressLint("SetTextI18n")
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+
         Mock mock = mocks.get(position);
         Picasso.get().load(mock.getImage()).into(holder.ivPhoto);
         holder.tvId.setText(mock.getId().toString());
@@ -76,6 +77,7 @@ public class GravityAdapter extends RecyclerView.Adapter<GravityAdapter.ViewHold
         private final TextView tvCost;
         private final TextView tvDescription;
 
+        @SuppressLint("ResourceAsColor")
         private ViewHolder(View itemView) {
             super(itemView);
             ivPhoto = itemView.findViewById(R.id.ivPhoto);//initiate views
@@ -84,6 +86,7 @@ public class GravityAdapter extends RecyclerView.Adapter<GravityAdapter.ViewHold
             tvCity = itemView.findViewById(R.id.tvCity);
             tvCost = itemView.findViewById(R.id.tvCost);
             tvDescription = itemView.findViewById(R.id.tvDescription);
+            tvName.setTextColor(R.color.colorAccent);
         }
     }
     public interface Callback{

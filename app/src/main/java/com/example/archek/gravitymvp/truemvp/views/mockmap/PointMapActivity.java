@@ -1,4 +1,4 @@
-package com.example.archek.gravitymvp.mvp.mockmap;
+package com.example.archek.gravitymvp.truemvp.views.mockmap;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,8 +6,8 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 
 import com.example.archek.gravitymvp.R;
-import com.example.archek.gravitymvp.mvp.GravityActivity;
-import com.example.archek.gravitymvp.net.Mock;
+import com.example.archek.gravitymvp.truemvp.utils.net.Mock;
+import com.example.archek.gravitymvp.truemvp.views.MainActivity;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -23,7 +23,7 @@ public class PointMapActivity extends AppCompatActivity implements OnMapReadyCal
     private static final String EXTRA_LONGITUDE = "longitude";
     private static final String EXTRA_NAME = "name";
 
-    public static Intent makeIntent(GravityActivity context, Mock mock) {
+    public static Intent makeIntent(MainActivity context, Mock mock) {
         return new Intent(context, PointMapActivity.class)
                 .putExtra(PointMapActivity.EXTRA_LATITUDE, mock.getLatitude())
                 .putExtra(PointMapActivity.EXTRA_LONGITUDE, mock.getLongitude())

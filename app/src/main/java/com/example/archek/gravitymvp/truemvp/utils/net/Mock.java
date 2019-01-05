@@ -1,4 +1,4 @@
-package com.example.archek.gravitymvp.net;
+package com.example.archek.gravitymvp.truemvp.utils.net;
 
 import com.google.gson.annotations.SerializedName;
 
